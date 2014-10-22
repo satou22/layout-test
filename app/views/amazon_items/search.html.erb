@@ -1,0 +1,9 @@
+<h4><%= @item.name %></h3>
+<p><%= File.expand_path(__FILE__)%></p>
+<img src=<%= @item_page.img_src[0] %> height="230", width="230"></img>
+<ul>
+<li>価格: <%= @item.price %></li>
+<% @item.detail.each do |detail| %>
+	<li><%= detail[:label_value] %></li>
+<% end %>
+</ul>
